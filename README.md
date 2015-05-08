@@ -20,7 +20,7 @@
 
 ## 性能测试 ##
 
-性能测试使用的是QeueuBench.php实现的，其环境参数与测试结果如下:
+性能测试使用的是QueueBench.php实现的，其环境参数与测试结果如下:
 
 	php: 5.4.40
 	Linux: 3.13.0-34-generic(buildd@allspice) (gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) )

@@ -3,6 +3,7 @@
 error_reporting(~E_NOTICE & E_ALL);
 
 require 'IQueue.php';
+require 'RabbitQueue.php';
 require 'MemcachedQueue.php';
 require 'MongodbQueue.php';
 require 'RedisQueue.php';
@@ -30,6 +31,7 @@ for($i=0;$i<$num;++$i){
 	}
 }
 
+$num += 5;
 
 for($i=0;$i<$num;++$i){
 	echo "$i:",$mobileMessageObj->pop(),"\n";

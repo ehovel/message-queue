@@ -3,6 +3,7 @@
 error_reporting(~E_WARNING & ~E_NOTICE & E_ALL);
 
 require 'IQueue.php';
+require 'RabbitQueue.php';
 require 'MemcachedQueue.php';
 require 'MongodbQueue.php';
 require 'RedisQueue.php';
@@ -14,7 +15,7 @@ $mq = new $class($config['driverInfo']);
 $mobileMessageObj = new MessageQueueProxy($mq);
 
 $time = 100;
-$num = 10000;
+$num = 5000;
 
 $success = 0;
 

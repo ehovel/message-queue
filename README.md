@@ -113,8 +113,38 @@ memcached的数据如下:
 	average: 1.2971623921394 s/10000times
 	rqs: 7709
 
+rabbitmq的数据如下:
+
+	class: RabbitQueue
+	push
+	times: 100 num: 5000
+	request: 500000
+	faild: 0
+	max: 0.56668591499329 s/5000times
+	min: 0.019957065582275 s/5000times
+	takes: 17.697237014771 s
+	average: 0.17697237014771 s/5000times
+	rqs: 28252
+	pop
+	times: 100 num: 5000
+	request: 500000
+	faild: 0
+	max: 1.709969997406 s/5000times
+	min: 0.56408095359802 s/5000times
+	takes: 85.071734666824 s
+	average: 0.85071734666824 s/5000times
+	rqs: 5877
+
+	VMware 10
+	centos 6.6
+	memory 2GB
+	cpu i5*4
+
+关于rabbitmq的更多信息，[请看这里](http://yaoguais.github.io/?s=md/php/mq.md#消息队列的实现amqp-rabbitmq)
+
 可以看出：
 
 - 可以看出redis在push上是mongodb的3.53倍,在pop上是mongodb的7.43倍.
 - mongodb没有索引,pop根本跑不动了。过了10多秒，我进数据库一看，才删除了99条.
 - 可以看出redis的push是memcached的2.3倍,redis的pop是memcached的4.5倍.
+- rabbitmq性能并不是最优的

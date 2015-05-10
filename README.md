@@ -14,7 +14,7 @@
 这里主要做了以下几个实现：
 
 1. redis+list
-2. mongodb+index
+2. mongodb+index+timestamp
 3. memcached+pointer
 4. amqp+rabbitmq
 

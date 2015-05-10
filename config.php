@@ -20,10 +20,23 @@ return array(
 	)
 );*/
 
+/*
 return array(
 		'driver' => 'MemcachedQueue',
 		'driverInfo' => array(
 				'host' => "127.0.0.1",
 				'post' => 11211
 		)
+);*/
+
+return array(
+	'driver' => 'RabbitQueue',
+	'driverInfo' => array(
+		'connArgs' => array(
+			'host' => 'localhost',
+			'port' => '5672',
+			'login' => 'guest',
+			'password' => 'guest'
+		)
+	)
 );
